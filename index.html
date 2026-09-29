@@ -47,7 +47,7 @@
 @media (max-width: 899px) {
   .первый-экран--разворот .кикер { margin-bottom: 14px; padding: 7px 16px 8px; font-size: clamp(24px, 7.2vw, 30px); }
   .первый-экран--разворот .первый-экран__картинка { isolation: isolate; }
-  .первый-экран--разворот .первый-экран__картинка::before { content: ""; position: absolute; z-index: 0; inset: 8% 8% 4%; border: 1px solid color-mix(in srgb, var(--цвет-акцент) 45%, transparent); border-radius: 48% 48% 22% 22%; background: radial-gradient(ellipse at 50% 36%, var(--цвет-фон-2) 0 42%, color-mix(in srgb, var(--цвет-тёплый-мягкий) 68%, var(--цвет-фон)) 78%); }
+  .первый-экран--разворот .первый-экран__картинка::before { content: ""; position: absolute; z-index: 0; inset: 2% 8% -24%; border: 1px solid color-mix(in srgb, var(--цвет-акцент) 45%, transparent); border-bottom: 0; border-radius: 50% 50% 0 0 / 22% 22% 0 0; background: radial-gradient(ellipse at 50% 30%, var(--цвет-фон-2) 0 44%, color-mix(in srgb, var(--цвет-тёплый-мягкий) 68%, var(--цвет-фон)) 82%); mask-image: linear-gradient(to bottom, black 0 78%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 0 78%, transparent 100%); }
   .первый-экран--разворот .первый-экран__картинка img { position: relative; z-index: 1; }
   .первый-экран--разворот .первый-экран__картинка img { transform: scale(1.28); transform-origin: 50% 0; }
 }
