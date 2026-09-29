@@ -46,6 +46,9 @@
 .первый-экран--разворот .шапка__лого::before { content: ""; width: 22px; height: 22px; flex: 0 0 22px; background: linear-gradient(var(--цвет-текст) 0 0) 0 0/12px 2px no-repeat, linear-gradient(var(--цвет-текст) 0 0) 0 0/2px 12px no-repeat, linear-gradient(var(--цвет-текст) 0 0) 100% 0/12px 2px no-repeat, linear-gradient(var(--цвет-текст) 0 0) 100% 0/2px 12px no-repeat, linear-gradient(var(--цвет-текст) 0 0) 0 100%/12px 2px no-repeat, linear-gradient(var(--цвет-текст) 0 0) 0 100%/2px 12px no-repeat, linear-gradient(var(--цвет-акцент) 0 0) 100% 100%/12px 2px no-repeat, linear-gradient(var(--цвет-акцент) 0 0) 100% 100%/2px 12px no-repeat; }
 @media (max-width: 899px) {
   .первый-экран--разворот .кикер { margin-bottom: 14px; padding: 7px 16px 8px; font-size: clamp(24px, 7.2vw, 30px); }
+  .первый-экран--разворот .первый-экран__картинка { isolation: isolate; }
+  .первый-экран--разворот .первый-экран__картинка::before { content: ""; position: absolute; z-index: 0; inset: 30% 8% 8%; border-radius: 48% 48% 22% 22%; background: radial-gradient(ellipse at 50% 38%, color-mix(in srgb, var(--цвет-фон-2) 70%, transparent) 0 42%, color-mix(in srgb, var(--цвет-тёплый-мягкий) 28%, transparent) 75%); }
+  .первый-экран--разворот .первый-экран__картинка img { position: relative; z-index: 1; }
   .первый-экран--разворот .первый-экран__картинка img { transform: scale(1.28); transform-origin: 50% 0; }
 }
 :root, .светлый { --цвет-кнопки: #80624D; --цвет-на-кнопке: #FBF7F2; --цвет-кнопки-навёл: #674E3E; }
