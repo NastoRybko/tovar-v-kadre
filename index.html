@@ -27,16 +27,17 @@
   --радиус: 16px; --радиус-малый: 8px; --радиус-карточки: 18px; --радиус-плитки: 22px; --радиус-телефон: 46px; --кнопка-радиус: 14px; --радиус-модуля: 16px; --нить: 2px; --плавность: cubic-bezier(.2, .7, .2, 1); --длительность: .25s;
   --цвет-тёплый-тёмный: #995531;
 }
-@media (min-width: 900px) { :root { --кегль-h1: clamp(44px, 4vw, 58px); } }
+@media (min-width: 900px) { :root { --кегль-h1: clamp(40px, 3.5vw, 52px); } }
 @media (min-width: 900px) {
-  .первый-экран--разворот .блок__внутри { grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr) !important; transform: scale(.88); transform-origin: 50% 42%; }
+  .первый-экран--разворот { padding-top: var(--отступ-блока); padding-bottom: 0; }
+  .первый-экран--разворот .блок__внутри { grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr) !important; }
   .первый-экран--разворот .первый-экран__текст { transform: translateX(5vw); }
-  .первый-экран--разворот .первый-экран__картинка img { transform: scale(1.23); transform-origin: 50% 10%; }
+  .первый-экран--разворот .первый-экран__картинка img { transform: scale(1.1); transform-origin: 50% 10%; }
   .первый-экран--разворот .первый-экран__картинка { isolation: isolate; }
   .первый-экран--разворот .первый-экран__картинка::before { content: ""; position: absolute; z-index: 0; inset: 14% 8% 4% 8%; border: 1px solid var(--цвет-линия); border-radius: 48% 48% 18% 18%; background: radial-gradient(ellipse at 50% 36%, var(--цвет-фон-2) 0 38%, color-mix(in srgb, var(--цвет-тёплый-мягкий) 42%, transparent) 72%); box-shadow: var(--тень); }
   .первый-экран--разворот .первый-экран__картинка img { z-index: 1; }
 }
-.первый-экран--разворот { min-height: 0; }
+.первый-экран--разворот { min-height: 100svh; }
 .первый-экран--разворот .акцент { color: var(--цвет-акцент-тёмный); }
 .первый-экран--разворот .кикер { display: inline-flex; align-items: center; margin-bottom: 18px; padding: 7px 18px 9px; border: 1px solid var(--цвет-акцент); border-radius: 999px; background: var(--цвет-фон-2); color: var(--цвет-акцент); font-family: var(--шрифт-рукописный); font-size: clamp(25px, 2vw, 32px); font-weight: 600; line-height: 1; letter-spacing: 0; }
 .первый-экран--разворот .кикер .иконка { display: none; }
