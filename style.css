@@ -1667,3 +1667,17 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 
   body.панель-с-переходом .липкая-кнопка { transition: none; }
 }
+
+/* экран 02 */
+#экран-02 .текстура__список { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 2vw, 24px); margin-top: clamp(30px, 5vw, 58px); }
+#экран-02 .роль { display: flex; flex-direction: column; justify-content: space-between; gap: clamp(18px, 3vw, 32px); min-height: 168px; padding: clamp(24px, 3.1vw, 42px); border: 1px solid var(--цвет-линия); border-radius: var(--радиус-карточки); }
+#экран-02 .роль:first-child { grid-column: 1 / -1; min-height: 144px; }
+#экран-02 .роль b { color: var(--цвет-акцент-тёмный); font-size: var(--кегль-лид); }
+#экран-02 .роль p { margin: 0; color: var(--цвет-текст-мягкий); font-size: var(--кегль-текст); line-height: 1.55; }
+#экран-02.светлый .роль { background: linear-gradient(105deg, color-mix(in srgb, var(--цвет-акцент-тёмный) 10%, var(--цвет-фон-2)), var(--цвет-фон-2) 72%); box-shadow: var(--тень); }
+#экран-02.тёмный .роль { background: linear-gradient(105deg, color-mix(in srgb, var(--цвет-акцент) 14%, var(--цвет-тёмный-фон-3)), var(--цвет-тёмный-фон-3) 72%); box-shadow: var(--тень-глубокая); }
+#экран-02.светлый .роль:first-child { background: linear-gradient(105deg, color-mix(in srgb, var(--цвет-акцент-глубже) 16%, var(--цвет-фон-2)), var(--цвет-фон-2) 72%); }
+#экран-02.тёмный .роль:first-child { background: linear-gradient(105deg, color-mix(in srgb, var(--цвет-акцент-глубже) 24%, var(--цвет-тёмный-фон-3)), var(--цвет-тёмный-фон-3) 72%); }
+#экран-02.светлый { background: linear-gradient(170deg, var(--цвет-фон-2), var(--цвет-фон) 75%); }
+#экран-02.тёмный { background: linear-gradient(170deg, var(--цвет-тёмный-фон-2), var(--цвет-тёмный-фон) 75%); }
+@media (max-width: 899px) { #экран-02 .текстура__список { grid-template-columns: 1fr; } #экран-02 .роль { gap: 10px; min-height: 0; padding: 26px; } #экран-02 .роль:first-child { grid-column: auto; } }
