@@ -1695,6 +1695,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 #экран-03 .врезка b { display: block; margin-bottom: 5px; color: var(--цвет-акцент-тёмный); font-size: var(--кегль-лид); }
 #экран-03 .врезка p { margin: 0; color: var(--цвет-текст-мягкий); font-size: var(--кегль-текст); line-height: 1.5; }
 #экран-03.светлый .результат { background: linear-gradient(105deg, color-mix(in srgb, var(--цвет-акцент-тёмный) 10%, var(--цвет-фон-2)), var(--цвет-фон-2) 72%); box-shadow: var(--тень); }
+#экран-03.светлый .результат:nth-child(1), #экран-03.светлый .результат:nth-child(4) { background: linear-gradient(105deg, color-mix(in srgb, var(--цвет-акцент) 24%, var(--цвет-фон-2)), color-mix(in srgb, var(--цвет-акцент) 8%, var(--цвет-фон-2)) 72%); }
 #экран-03.светлый .врезка { background: color-mix(in srgb, var(--цвет-акцент) 8%, var(--цвет-фон-2)); }
 #экран-03.тёмный .результат { background: linear-gradient(105deg, color-mix(in srgb, var(--цвет-акцент) 14%, var(--цвет-тёмный-фон-3)), var(--цвет-тёмный-фон-3) 72%); box-shadow: var(--тень-глубокая); }
 #экран-03.тёмный .врезка { background: var(--цвет-тёмный-фон-3); }
