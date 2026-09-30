@@ -1698,7 +1698,26 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 #экран-03.светлый .врезка { background: color-mix(in srgb, var(--цвет-акцент) 8%, var(--цвет-фон-2)); }
 #экран-03.тёмный .результат { background: linear-gradient(105deg, color-mix(in srgb, var(--цвет-акцент) 14%, var(--цвет-тёмный-фон-3)), var(--цвет-тёмный-фон-3) 72%); box-shadow: var(--тень-глубокая); }
 #экран-03.тёмный .врезка { background: var(--цвет-тёмный-фон-3); }
-@media (max-width: 899px) { #экран-03 .секция__шапка { text-align: left; } #экран-03 .секция__шапка .кикер, #экран-03 .секция__шапка .секция__лид { margin-inline: 0; } #экран-03 .результаты { grid-template-columns: 1fr; } #экран-03 .результат { min-height: 0; } #экран-03 .врезка { text-align: left; } }
+@media (max-width: 899px) {
+  #экран-03 { padding-bottom: calc(var(--отступ-секции) + 5.5rem); }
+  #экран-03 .секция__шапка { text-align: left; }
+  #экран-03 .секция__шапка .кикер, #экран-03 .секция__шапка .секция__лид { margin-inline: 0; }
+  #экран-03 .результаты { grid-template-columns: 1fr; }
+  #экран-03 .результат { min-height: 0; }
+  #экран-03 .врезка { text-align: left; }
+}
+@media (max-width: 600px) {
+  #экран-03 { padding-block: 36px calc(36px + 5.5rem); }
+  #экран-03 .секция__шапка h2 { font-size: var(--кегль-h2); line-height: 1.08; }
+  #экран-03 .секция__шапка .секция__лид { font-size: var(--кегль-текст); line-height: 1.4; }
+  #экран-03 .результаты { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 22px 0 10px; }
+  #экран-03 .результат { gap: 7px; padding: 14px; }
+  #экран-03 .результат b { font-size: var(--кегль-мелкий); line-height: 1.22; }
+  #экран-03 .результат span { font-size: var(--кегль-мелкий); line-height: 1.3; }
+  #экран-03 .врезка { padding: 14px; text-align: center; }
+  #экран-03 .врезка b { margin-bottom: 3px; font-size: var(--кегль-мелкий); }
+  #экран-03 .врезка p { font-size: var(--кегль-мелкий); line-height: 1.3; }
+}
 
 /* экран 04 */
 #экран-04 .пример__шапка { max-width: 42rem; margin: 0 auto clamp(24px, 3vw, 34px); text-align: center; }
