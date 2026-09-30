@@ -1743,10 +1743,10 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 #экран-04.тёмный .пример__кадр--тёмный { background: var(--цвет-тёмный-фон-3); }
 @media (min-width: 900px) {
   #экран-04 { min-height: 100svh; display: grid; align-items: center; padding-block: clamp(16px, 2.5vh, 30px); }
-  #экран-04 .пример__шапка { gap: .45rem; margin-bottom: clamp(14px, 2vh, 20px); }
-  #экран-04 .пример__кадры { width: min(100%, 46rem); gap: 18px; }
-  #экран-04 .пример__кадр { padding: 10px; }
-  #экран-04 .пример__подпись { margin: 8px 4px 0; }
+  #экран-04 .пример__шапка { gap: .3rem; margin-bottom: 8px; }
+  #экран-04 .пример__кадры { width: min(100%, 36rem); gap: 14px; }
+  #экран-04 .пример__кадр { padding: 8px; }
+  #экран-04 .пример__подпись { margin: 6px 4px 0; }
 }
 @media (max-width: 899px) {
   #экран-04 { padding-block: 36px; }
