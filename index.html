@@ -41,7 +41,8 @@
 .первый-экран--разворот .акцент { color: var(--цвет-акцент-тёмный); }
 .первый-экран--разворот .кикер { display: inline-flex; align-items: center; margin-bottom: 18px; padding: 7px 18px 9px; border: 1px solid var(--цвет-акцент); border-radius: 999px; background: var(--цвет-фон-2); color: var(--цвет-акцент); font-family: var(--шрифт-рукописный); font-size: clamp(25px, 2vw, 32px); font-weight: 600; line-height: 1; letter-spacing: 0; }
 .первый-экран--разворот .кикер .иконка { display: none; }
-.первый-экран--разворот .кнопка--главная { background: var(--цвет-акцент) !important; color: var(--цвет-фон-2) !important; }
+.кнопка { background: var(--цвет-акцент) !important; color: var(--цвет-текст) !important; }
+.кнопка:hover { background: var(--цвет-акцент-глубже) !important; color: var(--цвет-фон-2) !important; }
 .первый-экран--разворот .шапка__лого { display: inline-flex; align-items: center; gap: 10px; }
 .первый-экран--разворот .шапка__лого::before { content: ""; width: 22px; height: 22px; flex: 0 0 22px; background: linear-gradient(var(--цвет-текст) 0 0) 0 0/12px 2px no-repeat, linear-gradient(var(--цвет-текст) 0 0) 0 0/2px 12px no-repeat, linear-gradient(var(--цвет-текст) 0 0) 100% 0/12px 2px no-repeat, linear-gradient(var(--цвет-текст) 0 0) 100% 0/2px 12px no-repeat, linear-gradient(var(--цвет-текст) 0 0) 0 100%/12px 2px no-repeat, linear-gradient(var(--цвет-текст) 0 0) 0 100%/2px 12px no-repeat, linear-gradient(var(--цвет-акцент) 0 0) 100% 100%/12px 2px no-repeat, linear-gradient(var(--цвет-акцент) 0 0) 100% 100%/2px 12px no-repeat; }
 @media (max-width: 899px) {
@@ -133,6 +134,7 @@
       <div class="роль"><b>Небольшому бренду</b><p>нужны изображения изделия для карточки товара, публикаций и запусков</p></div>
       <div class="роль"><b>Магазину</b><p>нужно обновлять визуальную подачу товаров без новой съёмки для каждого сюжета</p></div>
     </div>
+    <div class="экран-02__действие"><a class="кнопка кнопка--главная" href="https://vk.ru/tovar_v_kadre">Написать в «Товар в кадре»</a></div>
   </div>
 </section>
 <div class="липкая-кнопка"><a class="кнопка кнопка--главная" href="https://vk.ru/tovar_v_kadre">Написать в «Товар в кадре»</a></div>

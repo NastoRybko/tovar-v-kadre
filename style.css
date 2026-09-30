@@ -1680,4 +1680,6 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 #экран-02.тёмный .роль:first-child { background: linear-gradient(105deg, color-mix(in srgb, var(--цвет-акцент-глубже) 24%, var(--цвет-тёмный-фон-3)), var(--цвет-тёмный-фон-3) 72%); }
 #экран-02.светлый { background: linear-gradient(170deg, var(--цвет-фон-2), var(--цвет-фон) 75%); }
 #экран-02.тёмный { background: linear-gradient(170deg, var(--цвет-тёмный-фон-2), var(--цвет-тёмный-фон) 75%); }
+#экран-02 .экран-02__действие { display: none; }
+@media (min-width: 900px) { #экран-02 .блок__внутри { display: grid; justify-items: center; width: min(calc(100% - 2 * var(--отступ-блока)), var(--ширина)); margin-inline: auto; } #экран-02 .секция__шапка { justify-items: center; text-align: center; } #экран-02 .текстура__список { width: 100%; margin-inline: auto; } #экран-02 .экран-02__действие { display: block; margin-top: clamp(28px, 4vw, 46px); } }
 @media (max-width: 899px) { #экран-02 .текстура__список { grid-template-columns: 1fr; } #экран-02 .роль { gap: 10px; min-height: 0; padding: 26px; } #экран-02 .роль:first-child { grid-column: auto; } }
