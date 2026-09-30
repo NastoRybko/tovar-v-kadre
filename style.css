@@ -1765,50 +1765,25 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 
 /* экран 05 */
 #экран-05 .путь__шапка { max-width: 42rem; margin-inline: auto; text-align: center; }
-#экран-05 .путь__шапка .кикер { margin-inline: auto; }
-#экран-05 .путь__лента { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin-top: 44px; list-style: none; padding: 0; }
-#экран-05 .путь__лента::before { content: ""; position: absolute; top: 20px; right: 9%; left: 9%; height: var(--нить); background: var(--цвет-линия); }
-#экран-05 .путь__шаг { position: relative; z-index: 1; }
-#экран-05 .путь__номер { display: grid; width: 42px; aspect-ratio: 1; place-items: center; margin: 0 auto 16px; border: 1px solid var(--цвет-акцент); border-radius: 50%; background: var(--цвет-фон-2); color: var(--цвет-акцент-глубже); font-size: var(--кегль-мелкий); font-weight: 700; }
-#экран-05 .путь__шаг:nth-child(odd) .путь__номер { background: var(--цвет-акцент); color: var(--цвет-на-акценте); }
-#экран-05 .путь__текст { text-align: center; }
-#экран-05 .путь__текст b { display: block; color: var(--цвет-текст); font-size: var(--кегль-текст); }
-#экран-05 .путь__текст span { display: block; margin-top: 8px; color: var(--цвет-текст-мягкий); font-size: var(--кегль-мелкий); line-height: 1.45; }
-@media (min-width: 900px) { #экран-05 { min-height: 100svh; display: grid; align-items: center; padding-block: 36px; } #экран-05 .путь__шапка { margin-bottom: 0; } }
-@media (max-width: 899px) { #экран-05 .путь__шапка { text-align: left; } #экран-05 .путь__шапка .кикер { margin-inline: 0; } #экран-05 .путь__лента { grid-template-columns: 1fr; gap: 18px; margin-top: 30px; } #экран-05 .путь__лента::before { display: none; } #экран-05 .путь__шаг { display: grid; grid-template-columns: 42px 1fr; gap: 16px; align-items: start; } #экран-05 .путь__номер { margin: 0; } #экран-05 .путь__текст { padding-top: 6px; text-align: left; } #экран-05 .путь__текст span { margin-top: 5px; font-size: var(--кегль-текст); } }
-#экран-05 .путь__шапка { margin-inline: 0; text-align: left; }
-#экран-05 .путь__шапка .кикер { margin-inline: 0; }
-#экран-05 .путь__лента { grid-template-columns: 1fr; width: min(100%, 48rem); margin: 30px auto 0; gap: 0; }
-#экран-05 .путь__лента::before { display: none; }
-#экран-05 .путь__шаг { display: grid; grid-template-columns: 4.5rem 1fr; gap: 20px; padding: 12px 0; border-top: 1px solid var(--цвет-линия); }
-#экран-05 .путь__шаг:last-child { border-bottom: 1px solid var(--цвет-линия); }
-#экран-05 .путь__номер { width: auto; margin: 0; border: 0; border-radius: 0; background: transparent; color: var(--цвет-акцент); font-size: var(--кегль-цифра); }
-#экран-05 .путь__шаг:nth-child(odd) .путь__номер { background: transparent; color: var(--цвет-акцент); }
-#экран-05 .путь__текст { padding-top: 4px; text-align: left; }
-#экран-05 .путь__текст b { font-size: var(--кегль-лид); }
-#экран-05 .путь__текст span { margin-top: 2px; }
-#экран-05 .путь__шапка { margin-inline: auto; text-align: center; }
-#экран-05 .путь__шапка .кикер { margin-inline: auto; }
-#экран-05 .путь__лента { grid-template-columns: repeat(5, minmax(0, 1fr)); width: min(100%, 58rem); margin: 34px auto 0; gap: 0; padding: 26px 18px; border: 1px solid var(--цвет-линия); border-radius: var(--радиус-плитки); }
-#экран-05 .путь__лента::before { display: block; top: 50%; right: 8%; left: 8%; background: color-mix(in srgb, var(--цвет-акцент) 45%, transparent); }
-#экран-05 .путь__шаг { display: block; padding: 0 10px; border: 0; text-align: center; }
-#экран-05 .путь__шаг:last-child { border: 0; }
-#экран-05 .путь__номер { display: grid; width: 38px; margin: 0 auto 12px; border: 1px solid var(--цвет-акцент); border-radius: 50%; background: var(--цвет-фон-2); color: var(--цвет-акцент-глубже); font-size: var(--кегль-мелкий); }
-#экран-05 .путь__шаг:nth-child(odd) .путь__номер { background: var(--цвет-акцент); color: var(--цвет-на-акценте); }
-#экран-05 .путь__текст { padding-top: 0; text-align: center; }
-#экран-05 .путь__текст b { font-size: var(--кегль-текст); }
-#экран-05 .путь__текст span { margin-top: 7px; }
-@media (max-width: 899px) { #экран-05 .путь__шапка { text-align: left; } #экран-05 .путь__шапка .кикер { margin-inline: 0; } #экран-05 .путь__лента { grid-template-columns: 1fr; width: auto; padding: 0; border: 0; gap: 18px; } #экран-05 .путь__лента::before { display: none; } #экран-05 .путь__шаг { display: grid; grid-template-columns: 42px 1fr; gap: 16px; padding: 0; text-align: left; } #экран-05 .путь__номер { width: 42px; margin: 0; } #экран-05 .путь__текст { text-align: left; } }
-
-#экран-05 .путь__шапка { max-width: 42rem; margin-inline: auto; text-align: center; }
-#экран-05 .путь__шапка .кикер { margin-inline: auto; }
-#экран-05 .путь__лента { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); width: auto; margin: 44px 0 0; gap: 14px; padding: 0; border: 0; border-radius: 0; }
-#экран-05 .путь__лента::before { display: block; top: 20px; right: 9%; left: 9%; height: var(--нить); background: var(--цвет-линия); }
-#экран-05 .путь__шаг { position: relative; z-index: 1; display: block; padding: 0; border: 0; text-align: initial; }
-#экран-05 .путь__шаг:last-child { border: 0; }
-#экран-05 .путь__номер { display: grid; width: 42px; aspect-ratio: 1; place-items: center; margin: 0 auto 16px; border: 1px solid var(--цвет-акцент); border-radius: 50%; background: var(--цвет-фон-2); color: var(--цвет-акцент-глубже); font-size: var(--кегль-мелкий); }
-#экран-05 .путь__шаг:nth-child(odd) .путь__номер { background: var(--цвет-акцент); color: var(--цвет-на-акценте); }
-#экран-05 .путь__текст { padding-top: 0; text-align: center; }
-#экран-05 .путь__текст b { font-size: var(--кегль-текст); }
-#экран-05 .путь__текст span { margin-top: 8px; }
-@media (max-width: 899px) { #экран-05 .путь__шапка { text-align: left; } #экран-05 .путь__шапка .кикер { margin-inline: 0; } #экран-05 .путь__лента { grid-template-columns: 1fr; margin-top: 30px; gap: 18px; } #экран-05 .путь__лента::before { display: none; } #экран-05 .путь__шаг { display: grid; grid-template-columns: 42px 1fr; gap: 16px; align-items: start; } #экран-05 .путь__номер { margin: 0; } #экран-05 .путь__текст { padding-top: 6px; text-align: left; } #экран-05 .путь__текст span { margin-top: 5px; font-size: var(--кегль-текст); } }
+    #экран-05 .путь__шапка .кикер { margin-inline: auto; }
+    #экран-05 .путь__лента { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin: 44px 0 0; padding: 0; list-style: none; }
+    #экран-05 .путь__лента::before { position: absolute; top: 20px; right: 9%; left: 9%; height: var(--нить); content: ""; background: var(--цвет-линия); }
+    #экран-05 .путь__шаг { position: relative; z-index: 1; }
+    #экран-05 .путь__номер { display: grid; width: 42px; aspect-ratio: 1; place-items: center; margin: 0 auto 16px; border: 1px solid var(--цвет-акцент); border-radius: 50%; background: var(--цвет-фон-2); color: var(--цвет-акцент-глубже); font-size: var(--кегль-мелкий); font-weight: 700; }
+    #экран-05 .путь__шаг:nth-child(odd) .путь__номер { background: var(--цвет-акцент); color: var(--цвет-на-акценте); }
+    #экран-05 .путь__текст { text-align: center; }
+    #экран-05 .путь__текст b { display: block; color: var(--цвет-текст); font-size: var(--кегль-текст); }
+    #экран-05 .путь__текст span { display: block; margin-top: 8px; color: var(--цвет-текст-мягкий); font-size: var(--кегль-мелкий); line-height: 1.45; }
+    @media (min-width: 900px) {
+      #экран-05 { display: grid; min-height: 100svh; align-items: center; padding-block: 36px; }
+    }
+    @media (max-width: 899px) {
+      #экран-05 .путь__шапка { text-align: left; }
+      #экран-05 .путь__шапка .кикер { margin-inline: 0; }
+      #экран-05 .путь__лента { grid-template-columns: 1fr; gap: 18px; margin-top: 30px; }
+      #экран-05 .путь__лента::before { display: none; }
+      #экран-05 .путь__шаг { display: grid; grid-template-columns: 42px 1fr; gap: 16px; align-items: start; }
+      #экран-05 .путь__номер { margin: 0; }
+      #экран-05 .путь__текст { padding-top: 6px; text-align: left; }
+      #экран-05 .путь__текст span { margin-top: 5px; font-size: var(--кегль-текст); }
+    }
