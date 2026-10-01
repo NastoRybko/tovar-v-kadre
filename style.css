@@ -1787,3 +1787,19 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
       #экран-05 .путь__текст { padding-top: 6px; text-align: left; }
       #экран-05 .путь__текст span { margin-top: 5px; font-size: var(--кегль-текст); }
     }
+
+/* экран 06 */
+#экран-06 .полоса6__шапка { display: grid; grid-template-columns: minmax(0, 1fr) minmax(14rem, .72fr); gap: 24px; align-items: end; margin-bottom: clamp(24px, 3vw, 34px); }
+#экран-06 .полоса6__вывод { margin: 0; padding: 14px 0 0; border-top: 2px solid var(--цвет-акцент); color: var(--цвет-текст-мягкий); font-size: var(--кегль-текст); line-height: 1.45; }
+#экран-06 .полоса6__кадры { display: grid; grid-template-columns: .72fr 1.28fr; gap: clamp(14px, 2vw, 22px); }
+#экран-06 .полоса6__исходник, #экран-06 .полоса6__результат { margin: 0; padding: 10px; border: 1px solid var(--цвет-линия); border-radius: var(--радиус-карточки); }
+#экран-06 .полоса6__исходник img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: contain; border-radius: var(--радиус-малый); }
+#экран-06 .полоса6__результаты { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; align-self: start; }
+#экран-06 .полоса6__результат img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--радиус-малый); }
+#экран-06 .полоса6__ярлык { display: flex; justify-content: space-between; gap: 8px; margin: 9px 2px 1px; color: var(--цвет-текст-мягкий); font-size: var(--кегль-мелкий); } #экран-06 .полоса6__ярлык b { color: var(--цвет-текст); font-size: var(--кегль-текст); }
+#экран-06 .полоса6__итог { grid-column: 1 / -1; margin: 0; color: var(--цвет-текст); font-size: var(--кегль-текст); font-weight: 700; }
+#экран-06 .полоса6__строка { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 16px; border-block: 1px solid var(--цвет-линия); } #экран-06 .полоса6__строка span { padding: 12px 4px; color: var(--цвет-текст-мягкий); font-size: var(--кегль-мелкий); } #экран-06 .полоса6__строка b { color: var(--цвет-текст); font-size: var(--кегль-текст); }
+#экран-06.светлый .полоса6__исходник, #экран-06.светлый .полоса6__результат { background: var(--цвет-фон-2); } #экран-06.тёмный .полоса6__исходник, #экран-06.тёмный .полоса6__результат { background: var(--цвет-тёмный-фон-3); }
+#экран-06.тёмный .полоса6__ярлык, #экран-06.тёмный .полоса6__строка span, #экран-06.тёмный .полоса6__вывод { color: var(--цвет-тёмный-текст); } #экран-06.тёмный .полоса6__ярлык b, #экран-06.тёмный .полоса6__строка b { color: var(--цвет-тёмный-текст); }
+@media (min-width: 900px) { #экран-06 .полоса6__исходник { width: 86%; } #экран-06 .полоса6__результаты { align-self: center; } }
+@media (max-width: 899px) { #экран-06 { padding-bottom: calc(36px + 96px); } #экран-06 .полоса6__шапка { grid-template-columns: 1fr; } #экран-06 .полоса6__кадры { grid-template-columns: 1fr; } #экран-06 .полоса6__исходник { width: min(100%, 12rem); } #экран-06 .полоса6__результаты { gap: 6px; } #экран-06 .полоса6__результат .полоса6__ярлык span { display: none; } #экран-06 .полоса6__строка span { padding: 10px 3px; } }
