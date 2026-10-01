@@ -1824,3 +1824,16 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-06 .полоса6__строка span { padding-block: 6px; }
 }
 @media (max-width: 899px) { #экран-06 { padding-bottom: calc(36px + 96px); } #экран-06 .полоса6__шапка { grid-template-columns: 1fr; } #экран-06 .полоса6__кадры { grid-template-columns: repeat(2, 1fr); gap: 10px; } #экран-06 .полоса6__исходник { width: auto; } #экран-06 .полоса6__результаты { display: contents; } #экран-06 .полоса6__результат .полоса6__ярлык span { display: none; } #экран-06 .полоса6__строка span { padding: 10px 3px; } }
+
+/* экран 07 */
+#экран-07 .лента7__шапка { display:grid; grid-template-columns:minmax(0,.8fr) minmax(18rem,1.2fr); gap:var(--отступ-блока); align-items:end; }
+#экран-07 .лента7__шапка .секция__шапка { margin:0; } #экран-07 .лента7__лид { margin:0; color:var(--цвет-текст-мягкий); font-size:var(--кегль-лид); line-height:1.45; }
+#экран-07 .лента7__кадры { display:flex; gap:12px; margin:clamp(22px,3vw,34px) 0 18px; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:8px; }
+#экран-07 .лента7__кадр { flex:0 0 clamp(150px,17vw,210px); margin:0; padding:8px; scroll-snap-align:start; border:1px solid var(--цвет-тёмный-фон-2); border-radius:var(--радиус-карточки); background:var(--цвет-тёмный-фон); }
+#экран-07 .лента7__кадр img { display:block; width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:var(--радиус-малый); } #экран-07 .лента7__кадр:first-child img { object-fit:contain; }
+#экран-07 .лента7__кадр figcaption { display:flex; justify-content:space-between; gap:8px; margin:9px 2px 1px; color:var(--цвет-тёмный-текст); font-size:var(--кегль-мелкий); } #экран-07 .лента7__кадр b { font-size:var(--кегль-текст); }
+#экран-07 .лента7__низ { display:grid; grid-template-columns:1fr auto; gap:var(--отступ-блока); align-items:end; border-top:1px solid color-mix(in srgb,var(--цвет-линия) 65%,transparent); padding-top:14px; }
+#экран-07 .лента7__состав { display:flex; flex-wrap:wrap; gap:7px; } #экран-07 .лента7__состав span { padding:7px 10px; border:1px solid color-mix(in srgb,var(--цвет-линия) 55%,transparent); border-radius:var(--радиус-телефон); color:var(--цвет-текст-мягкий); font-size:var(--кегль-мелкий); }
+#экран-07 .лента7__цена { margin:0; color:var(--цвет-текст); font-size:var(--кегль-лид); font-weight:700; white-space:nowrap; }
+@media (min-width:900px) and (max-height:800px) { #экран-07 { min-height:100svh; display:grid; align-items:center; padding-block:22px; } #экран-07 .лента7__кадры { margin-block:16px 12px; } #экран-07 .лента7__кадр { flex-basis:150px; } #экран-07 .лента7__кадр img { max-height:180px; aspect-ratio:auto; } }
+@media (max-width:899px) { #экран-07 { padding-bottom:calc(36px + 96px); } #экран-07 .лента7__шапка { grid-template-columns:1fr; } #экран-07 .лента7__кадры { margin-inline:calc(-1 * var(--отступ-блока)); padding-inline:var(--отступ-блока); } #экран-07 .лента7__низ { grid-template-columns:1fr; } }
