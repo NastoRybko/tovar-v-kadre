@@ -1811,4 +1811,16 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-06 .полоса6__строка { margin-top: 12px; }
   #экран-06 .полоса6__строка span { padding-block: 8px; }
 }
+@media (min-width: 900px) and (max-height: 800px) {
+  #экран-06 { padding-block: 14px; }
+  #экран-06 .полоса6__шапка { margin-bottom: 12px; }
+  #экран-06 .полоса6__кадры { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; align-items: start; }
+  #экран-06 .полоса6__исходник, #экран-06 .полоса6__результат { width: 100%; padding: 8px; }
+  #экран-06 .полоса6__исходник img, #экран-06 .полоса6__результат img { width: auto; max-width: 100%; height: min(26vh, 210px); margin-inline: auto; }
+  #экран-06 .полоса6__результаты { display: contents; }
+  #экран-06 .полоса6__исходник { grid-row: 1 / span 2; }
+  #экран-06 .полоса6__итог { grid-column: 2 / -1; margin-top: -2px; }
+  #экран-06 .полоса6__строка { margin-top: 8px; }
+  #экран-06 .полоса6__строка span { padding-block: 6px; }
+}
 @media (max-width: 899px) { #экран-06 { padding-bottom: calc(36px + 96px); } #экран-06 .полоса6__шапка { grid-template-columns: 1fr; } #экран-06 .полоса6__кадры { grid-template-columns: repeat(2, 1fr); gap: 10px; } #экран-06 .полоса6__исходник { width: auto; } #экран-06 .полоса6__результаты { display: contents; } #экран-06 .полоса6__результат .полоса6__ярлык span { display: none; } #экран-06 .полоса6__строка span { padding: 10px 3px; } }
