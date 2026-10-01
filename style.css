@@ -1683,7 +1683,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 #экран-02 .экран-02__действие { display: none; }
 @media (min-width: 900px) { #экран-02 { padding-block: clamp(48px, 6vh, 70px); } #экран-02 .блок__внутри { display: grid; justify-items: center; width: min(calc(100% - 2 * var(--отступ-блока)), var(--ширина)); margin-inline: auto; } #экран-02 .секция__шапка { justify-items: center; gap: .45rem; margin-bottom: 0; text-align: center; } #экран-02 .текстура__список { width: 100%; gap: 16px; margin-top: clamp(24px, 3vh, 32px); margin-inline: auto; } #экран-02 .роль { min-height: 136px; padding: clamp(22px, 2vw, 28px); gap: 14px; } #экран-02 .роль:first-child { min-height: 120px; } #экран-02 .экран-02__действие { display: block; margin-top: 24px; } }
 @media (max-width: 899px) { #экран-02 .текстура__список { grid-template-columns: 1fr; } #экран-02 .роль { gap: 10px; min-height: 0; padding: 26px; } #экран-02 .роль:first-child { grid-column: auto; } }
-@media (min-width:900px) and (max-height:900px) { #экран-02 { padding-block:var(--отступ-секции-тихо); } }
+@media (min-width:900px) and (max-height:1100px) { #экран-02 { padding-block:var(--отступ-секции-тихо); } }
 
 /* экран 03 */
 #экран-03 .секция__шапка { max-width: 44rem; margin-inline: auto; text-align: center; }
@@ -1727,7 +1727,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-03 .врезка b { margin-bottom: 3px; font-size: var(--кегль-мелкий); }
   #экран-03 .врезка p { font-size: var(--кегль-мелкий); line-height: 1.3; }
 }
-@media (min-width:900px) and (max-height:900px) { #экран-03 { padding-block:var(--отступ-секции-тихо); } }
+@media (min-width:900px) and (max-height:1100px) { #экран-03 { padding-block:var(--отступ-секции-тихо); } }
 
 /* экран 04 */
 #экран-04 .пример__шапка { max-width: 42rem; margin: 0 auto clamp(24px, 3vw, 34px); text-align: center; }
@@ -1764,7 +1764,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-04 .пример__подпись { display: block; }
   #экран-04 .пример__подпись b { display: block; margin-bottom: 3px; }
 }
-@media (min-width:900px) and (max-height:900px) { #экран-04 { padding-block:var(--отступ-секции-тихо); } }
+@media (min-width:900px) and (max-height:1100px) { #экран-04 { padding-block:var(--отступ-секции-тихо); } }
 
 /* экран 05 */
 #экран-05 .путь__шапка { max-width: 42rem; margin-inline: auto; text-align: center; }
@@ -1790,7 +1790,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
       #экран-05 .путь__текст { padding-top: 6px; text-align: left; }
       #экран-05 .путь__текст span { margin-top: 5px; font-size: var(--кегль-текст); }
     }
-@media (min-width:900px) and (max-height:900px) { #экран-05 { padding-block:var(--отступ-секции-тихо); } }
+@media (min-width:900px) and (max-height:1100px) { #экран-05 { padding-block:var(--отступ-секции-тихо); } }
 
 /* экран 06 */
 #экран-06 .полоса6__шапка { display: grid; grid-template-columns: minmax(0, 1fr) minmax(14rem, .72fr); gap: 24px; align-items: end; margin-bottom: clamp(24px, 3vw, 34px); }
@@ -1828,7 +1828,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-06 .полоса6__строка span { padding-block: 6px; }
 }
 @media (max-width: 899px) { #экран-06 { padding-bottom: calc(36px + 96px); } #экран-06 .полоса6__шапка { grid-template-columns: 1fr; } #экран-06 .полоса6__кадры { grid-template-columns: repeat(2, 1fr); gap: 10px; } #экран-06 .полоса6__исходник { width: auto; } #экран-06 .полоса6__результаты { display: contents; } #экран-06 .полоса6__результат .полоса6__ярлык span { display: none; } #экран-06 .полоса6__строка span { padding: 10px 3px; } }
-@media (min-width:900px) and (max-height:900px) { #экран-06 { padding-block:var(--отступ-секции-тихо); } }
+@media (min-width:900px) and (max-height:1100px) { #экран-06 { padding-block:var(--отступ-секции-тихо); } }
 
 /* экран 07 */
 #экран-07 .лента7__шапка { display:grid; grid-template-columns:minmax(0,.8fr) minmax(18rem,1.2fr); gap:var(--отступ-блока); align-items:end; }
@@ -1860,7 +1860,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-08 .автор8__фото { grid-area: фото; margin: 0; overflow: hidden; border-radius: var(--радиус-карточки); box-shadow: var(--тень); }
   #экран-08 .автор8__фото img { display: block; width: 100%; min-height: 560px; object-fit: cover; object-position: 48% center; }
   @media (max-width: 899px) { #экран-08 .автор8__плита { grid-template-columns: minmax(0, 1.8fr) minmax(104px, 1fr); grid-template-areas: "кикер кикер" "фото цифры" "текст текст"; column-gap: 10px; row-gap: 18px; } #экран-08 .автор8__кикер { margin: 0; } #экран-08 .автор8__фото img { width: auto; max-width: 100%; min-height: 0; height: 330px; margin: 0 auto; object-fit: contain; } #экран-08 .автор8__цифры { grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); align-self: stretch; height: 330px; gap: 7px; margin: 0; } #экран-08 .автор8__цифра { display: flex; flex-direction: column; justify-content: center; padding: 8px 9px; min-height: 0; overflow: hidden; } #экран-08 .автор8__число { font-size: var(--кегль-цифра); line-height: 1; } #экран-08 .автор8__цифра--длинная .автор8__число { font-size: var(--кегль-лид); } #экран-08 .автор8__подпись { margin-top: 3px; font-size: var(--кегль-мелкий); line-height: 1.16; } #экран-08 .автор8__текст { padding: 0; } }
-@media (min-width:900px) and (max-height:900px) { #экран-08 { padding-block:var(--отступ-секции-тихо); } }
+@media (min-width:900px) and (max-height:1100px) { #экран-08 { padding-block:var(--отступ-секции-тихо); } }
 
 /* экран 09 */
 #экран-09 { padding-block: var(--отступ-секции-тихо); }
@@ -1890,5 +1890,5 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   @media (hover: hover) and (pointer: fine) { #экран-09 .цены9__карточка { transition: box-shadow var(--длительность) var(--плавность); } #экран-09 .цены9__карточка:hover { animation: цены9-пульс 1.6s var(--плавность) infinite; } }
   @keyframes цены9-пульс { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.018); } }
   @media (prefers-reduced-motion: reduce) { #экран-09 .цены9__карточка { animation: none; transition: none; } }
-  @media (min-width: 900px) and (max-height: 900px) { #экран-09 { min-height: 100svh; display: grid; align-items: center; padding-block: 22px; } #экран-09 .цены9__шапка { margin-bottom: 16px; } #экран-09 .цены9__карточка { padding: 20px; } #экран-09 .цены9__завершение { margin-top: 16px; } }
+  @media (min-width: 900px) and (max-height: 1100px) { #экран-09 { min-height: 100svh; display: grid; align-items: center; padding-block: 22px; } #экран-09 .цены9__шапка { margin-bottom: 16px; } #экран-09 .цены9__карточка { padding: 20px; } #экран-09 .цены9__завершение { margin-top: 16px; } }
   @media (max-width: 899px) { #экран-09 .цены9__сетка { grid-template-columns: 1fr; } #экран-09 .цены9__строка { gap: 8px; } }
