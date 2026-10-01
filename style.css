@@ -1804,6 +1804,8 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 #экран-06 .полоса6__итог { grid-column: 1 / -1; margin: 0; color: var(--цвет-текст); font-size: var(--кегль-текст); font-weight: 700; }
 #экран-06 .полоса6__строка { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 16px; border-block: 1px solid var(--цвет-линия); } #экран-06 .полоса6__строка span { padding: 12px 4px; color: var(--цвет-текст-мягкий); font-size: var(--кегль-мелкий); } #экран-06 .полоса6__строка b { color: var(--цвет-текст); font-size: var(--кегль-текст); }
 #экран-06.светлый .полоса6__исходник, #экран-06.светлый .полоса6__результат { background: var(--цвет-фон-2); } #экран-06.тёмный .полоса6__исходник, #экран-06.тёмный .полоса6__результат { background: var(--цвет-тёмный-фон-3); }
+#экран-06.светлый { background: linear-gradient(135deg, color-mix(in srgb, var(--цвет-акцент-тёмный) 9%, var(--цвет-фон)) 0%, var(--цвет-фон) 38%, var(--цвет-фон) 100%); }
+#экран-06.тёмный { background: linear-gradient(135deg, color-mix(in srgb, var(--цвет-акцент) 10%, var(--цвет-тёмный-фон)) 0%, var(--цвет-тёмный-фон) 42%, var(--цвет-тёмный-фон) 100%); }
 #экран-06.тёмный .полоса6__ярлык, #экран-06.тёмный .полоса6__строка span, #экран-06.тёмный .полоса6__вывод { color: var(--цвет-тёмный-текст); } #экран-06.тёмный .полоса6__ярлык b, #экран-06.тёмный .полоса6__строка b { color: var(--цвет-тёмный-текст); }
 @media (min-width: 900px) {
   #экран-06 { min-height: 100svh; display: grid; align-items: center; padding-block: clamp(20px, 3vh, 34px); }
