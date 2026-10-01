@@ -1841,16 +1841,17 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 /* экран 08 */
 #экран-08.светлый { background: var(--цвет-фон); color: var(--цвет-текст); }
   #экран-08.тёмный { background: var(--цвет-фон-2); color: var(--цвет-текст); }
-  #экран-08 .автор8__плита { display: grid; grid-template-columns: minmax(0, .92fr) minmax(270px, .8fr); align-items: center; gap: clamp(28px, 6vw, 84px); }
+  #экран-08 .автор8__плита { display: grid; grid-template-columns: minmax(0, .92fr) minmax(270px, .8fr); grid-template-areas: "кикер фото" "текст фото" "цифры фото"; align-items: center; column-gap: clamp(28px, 6vw, 84px); row-gap: 0; }
+  #экран-08 .автор8__кикер { grid-area: кикер; justify-self: start; margin-bottom: var(--отступ-блока); color: var(--цвет-акцент); }
   #экран-08 .автор8__текст { padding: clamp(8px, 2vw, 22px) 0; }
-  #экран-08 .автор8__текст .кикер { color: var(--цвет-акцент); }
+  #экран-08 .автор8__текст { grid-area: текст; }
   #экран-08 .автор8__текст h2 { color: var(--цвет-текст); }
   #экран-08 .автор8__роль { margin: 0 0 var(--отступ-блока); color: var(--цвет-текст-мягкий); font-size: var(--кегль-лид); }
   #экран-08 .автор8__рассказ { margin: 0; font-size: var(--кегль-текст); line-height: 1.55; }
-  #экран-08 .автор8__цифры { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin-top: clamp(26px, 4vw, 46px); }
+  #экран-08 .автор8__цифры { display: grid; grid-area: цифры; grid-template-columns: repeat(3, 1fr); gap: 9px; margin-top: clamp(26px, 4vw, 46px); }
   #экран-08 .автор8__цифра { padding: 14px 12px; border-radius: var(--радиус-малый); background: linear-gradient(135deg, var(--цвет-тёмный-фон), var(--цвет-тёмный-фон-2)); color: var(--цвет-тёмный-текст); }
   #экран-08 .автор8__число { display: block; color: var(--цвет-тёмный-текст); font-size: var(--кегль-цифра); font-weight: 700; line-height: 1.05; }
   #экран-08 .автор8__подпись { display: block; margin-top: 5px; color: var(--цвет-тёплый-мягкий); font-size: var(--кегль-мелкий); line-height: 1.3; }
-  #экран-08 .автор8__фото { margin: 0; overflow: hidden; border-radius: var(--радиус-карточки); box-shadow: var(--тень); }
+  #экран-08 .автор8__фото { grid-area: фото; margin: 0; overflow: hidden; border-radius: var(--радиус-карточки); box-shadow: var(--тень); }
   #экран-08 .автор8__фото img { display: block; width: 100%; min-height: 560px; object-fit: cover; object-position: 48% center; }
-  @media (max-width: 899px) { #экран-08 .автор8__плита { grid-template-columns: 1fr; gap: 26px; } #экран-08 .автор8__фото { order: -1; } #экран-08 .автор8__фото img { width: auto; max-width: 100%; min-height: 0; height: 330px; margin: 0 auto; object-fit: contain; } #экран-08 .автор8__цифры { gap: 7px; } }
+  @media (max-width: 899px) { #экран-08 .автор8__плита { grid-template-columns: minmax(0, 1.8fr) minmax(104px, 1fr); grid-template-areas: "кикер кикер" "фото цифры" "текст текст"; column-gap: 10px; row-gap: 18px; } #экран-08 .автор8__кикер { margin: 0; } #экран-08 .автор8__фото img { width: auto; max-width: 100%; min-height: 0; height: 330px; margin: 0 auto; object-fit: contain; } #экран-08 .автор8__цифры { grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); align-self: stretch; height: 330px; gap: 7px; margin: 0; } #экран-08 .автор8__цифра { display: flex; flex-direction: column; justify-content: center; padding: 8px 9px; min-height: 0; overflow: hidden; } #экран-08 .автор8__число { font-size: var(--кегль-цифра); line-height: 1; } #экран-08 .автор8__цифра--длинная .автор8__число { font-size: var(--кегль-лид); } #экран-08 .автор8__подпись { margin-top: 3px; font-size: var(--кегль-мелкий); line-height: 1.16; } #экран-08 .автор8__текст { padding: 0; } }
