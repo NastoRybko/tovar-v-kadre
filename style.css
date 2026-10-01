@@ -1855,3 +1855,33 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-08 .автор8__фото { grid-area: фото; margin: 0; overflow: hidden; border-radius: var(--радиус-карточки); box-shadow: var(--тень); }
   #экран-08 .автор8__фото img { display: block; width: 100%; min-height: 560px; object-fit: cover; object-position: 48% center; }
   @media (max-width: 899px) { #экран-08 .автор8__плита { grid-template-columns: minmax(0, 1.8fr) minmax(104px, 1fr); grid-template-areas: "кикер кикер" "фото цифры" "текст текст"; column-gap: 10px; row-gap: 18px; } #экран-08 .автор8__кикер { margin: 0; } #экран-08 .автор8__фото img { width: auto; max-width: 100%; min-height: 0; height: 330px; margin: 0 auto; object-fit: contain; } #экран-08 .автор8__цифры { grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); align-self: stretch; height: 330px; gap: 7px; margin: 0; } #экран-08 .автор8__цифра { display: flex; flex-direction: column; justify-content: center; padding: 8px 9px; min-height: 0; overflow: hidden; } #экран-08 .автор8__число { font-size: var(--кегль-цифра); line-height: 1; } #экран-08 .автор8__цифра--длинная .автор8__число { font-size: var(--кегль-лид); } #экран-08 .автор8__подпись { margin-top: 3px; font-size: var(--кегль-мелкий); line-height: 1.16; } #экран-08 .автор8__текст { padding: 0; } }
+
+/* экран 09 */
+#экран-09 { padding-block: var(--отступ-секции-тихо); }
+  #экран-09 .цены9__шапка { max-width: var(--ширина-колонки); margin: 0 auto var(--отступ-блока); text-align: center; }
+  #экран-09 .цены9__сетка { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); align-items: stretch; }
+  #экран-09 .цены9__карточка { display: flex; flex-direction: column; min-height: 100%; padding: clamp(20px, 3vw, 32px); border-radius: var(--радиус-плитки); box-shadow: var(--тень); transform-origin: center; }
+  #экран-09.светлый .цены9__карточка--визуал { border: 1px solid var(--цвет-линия); background: var(--цвет-фон-2); color: var(--цвет-текст); }
+  #экран-09.тёмный .цены9__карточка--визуал { border: 1px solid color-mix(in srgb, var(--цвет-тёплый) 32%, transparent); background: var(--цвет-тёмный-фон-3); color: var(--цвет-тёмный-текст); }
+  #экран-09.светлый .цены9__карточка--упаковка { background: linear-gradient(145deg, var(--цвет-акцент), var(--цвет-акцент-тёмный)); color: var(--цвет-на-акценте); box-shadow: var(--тень-глубокая); }
+  #экран-09.тёмный .цены9__карточка--упаковка { background: linear-gradient(145deg, var(--цвет-акцент), var(--цвет-акцент-тёмный)); color: var(--цвет-на-акценте); box-shadow: var(--тень-глубокая); }
+  #экран-09 .цены9__карточка h3 { margin-bottom: clamp(18px, 2vw, 28px); }
+  #экран-09.светлый .цены9__карточка--визуал h3 { color: var(--цвет-текст); }
+  #экран-09.тёмный .цены9__карточка--визуал h3 { color: var(--цвет-тёмный-текст); }
+  #экран-09 .цены9__карточка--упаковка h3 { color: var(--цвет-на-акценте); }
+  #экран-09 .цены9__строка { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; padding: 14px 0; border-top: 1px solid color-mix(in srgb, currentColor 24%, transparent); }
+  #экран-09 .цены9__строка:first-of-type { border-top: 0; }
+  #экран-09 .цены9__название, #экран-09 .цены9__пояснение { display: block; }
+  #экран-09 .цены9__название { font-weight: 700; }
+  #экран-09.светлый .цены9__карточка--визуал .цены9__пояснение { color: var(--цвет-текст-мягкий); }
+  #экран-09.тёмный .цены9__карточка--визуал .цены9__пояснение { color: color-mix(in srgb, var(--цвет-тёмный-текст) 78%, transparent); }
+  #экран-09 .цены9__карточка--упаковка .цены9__пояснение { color: color-mix(in srgb, var(--цвет-на-акценте) 82%, transparent); }
+  #экран-09 .цены9__стоимость { align-self: start; white-space: nowrap; font-size: var(--кегль-лид); }
+  #экран-09 .цены9__состав { margin: 0 0 var(--отступ-блока); font-size: var(--кегль-лид); line-height: 1.5; }
+  #экран-09 .цены9__главная-цена { display: block; margin: 0 0 var(--отступ-блока); color: var(--цвет-на-акценте); font-size: var(--кегль-h2); font-weight: 700; line-height: 1; }
+  #экран-09 .цены9__доп { margin-top: auto; }
+  #экран-09 .цены9__завершение { display: flex; justify-content: center; margin: var(--отступ-блока) auto 0; }
+  @media (hover: hover) and (pointer: fine) { #экран-09 .цены9__карточка { transition: box-shadow var(--длительность) var(--плавность); } #экран-09 .цены9__карточка:hover { animation: цены9-пульс 1.6s var(--плавность) infinite; } }
+  @keyframes цены9-пульс { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.018); } }
+  @media (prefers-reduced-motion: reduce) { #экран-09 .цены9__карточка { animation: none; transition: none; } }
+  @media (max-width: 899px) { #экран-09 .цены9__сетка { grid-template-columns: 1fr; } #экран-09 .цены9__строка { gap: 8px; } }
