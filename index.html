@@ -11,11 +11,12 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Caveat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Caveat:wght@600&display=swap">
 <link rel="stylesheet" href="style.css">
 <style>
 :root {
   --шрифт-заголовков: Montserrat, system-ui, sans-serif; --шрифт-текста: Montserrat, system-ui, sans-serif; --шрифт-рукописный: Caveat, cursive;
+  --веса-рукописного: 600;
   --цвет-фон: #F2E5D6; --цвет-фон-2: #FBF7F2; --цвет-фон-карточки: #F2E5D6;
   --цвет-текст: #482D1F; --цвет-текст-мягкий: #80624D; --цвет-текст-тихий: #79624F;
   --цвет-акцент: #C77950; --цвет-акцент-тёмный: #80624D; --цвет-акцент-яркий: #C77950; --цвет-акцент-глубже: #614534; --цвет-акцент-маркер: #6F523F; --цвет-на-акценте: #F2E5D6; --цвет-линия: #DDC7AF;
@@ -32,7 +33,7 @@
   .первый-экран--разворот { padding-top: var(--отступ-блока); padding-bottom: 0; }
   .первый-экран--разворот .блок__внутри { grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr) !important; }
   .первый-экран--разворот .первый-экран__текст { transform: translateX(5vw); }
-  .первый-экран--разворот .первый-экран__картинка img { transform: scale(1.1); transform-origin: 50% 10%; }
+  .первый-экран--разворот .первый-экран__картинка img { transform: scale(1.1) translateX(-10%); transform-origin: 50% 10%; }
   .первый-экран--разворот .первый-экран__картинка { isolation: isolate; }
   .первый-экран--разворот .первый-экран__картинка::before { content: ""; position: absolute; z-index: 0; inset: 14% 8% 4% 8%; border: 1px solid var(--цвет-линия); border-radius: 48% 48% 18% 18%; background: radial-gradient(ellipse at 50% 36%, var(--цвет-фон-2) 0 38%, color-mix(in srgb, var(--цвет-тёплый-мягкий) 42%, transparent) 72%); box-shadow: var(--тень); }
   .первый-экран--разворот .первый-экран__картинка img { z-index: 1; }
@@ -41,8 +42,8 @@
 .первый-экран--разворот .акцент { color: var(--цвет-акцент-тёмный); }
 .первый-экран--разворот .кикер { display: inline-flex; align-items: center; margin-bottom: 18px; padding: 7px 18px 9px; border: 1px solid var(--цвет-акцент); border-radius: 999px; background: var(--цвет-фон-2); color: var(--цвет-акцент); font-family: var(--шрифт-рукописный); font-size: clamp(25px, 2vw, 32px); font-weight: 600; line-height: 1; letter-spacing: 0; }
 .первый-экран--разворот .кикер .иконка { display: none; }
-.кнопка { background: var(--цвет-акцент) !important; color: var(--цвет-текст) !important; }
-.кнопка:hover { background: var(--цвет-акцент-глубже) !important; color: var(--цвет-фон-2) !important; }
+.кнопка { background: var(--цвет-кнопки, var(--цвет-акцент)) !important; color: var(--цвет-на-кнопке, var(--цвет-на-акценте)) !important; }
+.кнопка:hover { background: var(--цвет-кнопки-навёл, var(--цвет-акцент-глубже)) !important; color: var(--цвет-на-кнопке, var(--цвет-на-акценте)) !important; }
 .первый-экран--разворот .шапка__лого { display: inline-flex; align-items: center; gap: 10px; }
 .первый-экран--разворот .шапка__лого::before { content: ""; width: 22px; height: 22px; flex: 0 0 22px; background: linear-gradient(var(--цвет-текст) 0 0) 0 0/12px 2px no-repeat, linear-gradient(var(--цвет-текст) 0 0) 0 0/2px 12px no-repeat, linear-gradient(var(--цвет-текст) 0 0) 100% 0/12px 2px no-repeat, linear-gradient(var(--цвет-текст) 0 0) 100% 0/2px 12px no-repeat, linear-gradient(var(--цвет-текст) 0 0) 0 100%/12px 2px no-repeat, linear-gradient(var(--цвет-текст) 0 0) 0 100%/2px 12px no-repeat, linear-gradient(var(--цвет-акцент) 0 0) 100% 100%/12px 2px no-repeat, linear-gradient(var(--цвет-акцент) 0 0) 100% 100%/2px 12px no-repeat; }
 @media (max-width: 899px) {
@@ -52,6 +53,13 @@
   .первый-экран--разворот .первый-экран__картинка img { position: relative; z-index: 1; }
   .первый-экран--разворот .первый-экран__картинка img { transform: scale(1.28); transform-origin: 50% 0; }
 }
+@media (max-width: 480px) and (max-height: 760px) {
+  .первый-экран--разворот .первый-экран__картинка { max-height: 42svh; overflow: hidden; }
+  .первый-экран--разворот .первый-экран__картинка img { width: 100%; height: 42svh; object-fit: cover; object-position: center top; }
+  .первый-экран--разворот .первый-экран__действие { margin: 16px 0 0; }
+}
+#экран-1 .пятно, #экран-03 .пятно, #экран-04 .пятно, #экран-05 .пятно, #экран-11 .пятно,
+#экран-03::before, #экран-03::after, #экран-04::before, #экран-04::after { animation: none; }
 @media (min-width: 900px) and (max-height: 900px) {
   .блок:not(.первый-экран) { padding-block: var(--отступ-секции-тихо); }
 }
@@ -120,7 +128,10 @@
       <div class="первый-экран__действие"><a class="кнопка кнопка--главная" href="https://vk.me/tovar_v_kadre">Написать в «Товар в кадре»</a></div>
     </div>
     <figure class="картинка картинка--фото картинка--край первый-экран__картинка" style="--лицо-в-кадре: .28">
-      <picture><source media="(max-width: 899px)" srcset="img/chelovek-vyrez-telefon.webp"><img src="img/chelovek-vyrez.png" alt="Товар в кадре — новые визуальные истории вашего настоящего товара" data-лицо="50,22" fetchpriority="high"></picture>
+      <picture>
+        <source media="(max-width: 700px)" srcset="img/oblozhka-anastasiya-vaza-fon-telefon.webp">
+        <img src="img/oblozhka-anastasiya-vaza-fon-kompyuter.webp" alt="Анастасия показывает вазу ручной росписи" fetchpriority="high">
+      </picture>
     </figure>
   </div>
 </section>
@@ -142,14 +153,16 @@
 <section class="блок блок--что-получите светлый фон--пятна" id="экран-03" data-тип="что-получите" data-вёрстка="своя">
 <span class="пятно" aria-hidden="true"></span>
 <div class="блок__внутри">
-  <div class="секция__шапка"><p class="кикер">Какой результат получаете</p><h2>Готовые изображения для вашей задачи</h2><p class="лид секция__лид">Для карточки товара, публикации, рекламы или новой визуальной подачи</p></div>
-  <div class="результаты секция__тело">
-    <article class="результат"><b>Серия изображений</b><span>Новые сцены для конкретного товара</span></article>
-    <article class="результат"><b>Узнаваемое изделие в кадре</b><span>С вниманием к форме, цвету, фактуре и характерным деталям</span></article>
-    <article class="результат"><b>Кадры под задачу</b><span>Для карточки товара, публикации, рекламы или запуска</span></article>
-    <article class="результат"><b>Визуальная история товара</b><span>Несколько способов показать изделие в новом окружении</span></article>
+  <div class="результаты-сторона">
+    <div class="секция__шапка"><p class="кикер">Какой результат получаете</p><h2>Готовые изображения для вашей задачи</h2><p class="лид секция__лид">Для карточки товара, публикации, рекламы или новой визуальной подачи</p></div>
+    <div class="результаты секция__тело">
+      <article class="результат"><div><b>Серия изображений</b><span>Новые сцены для конкретного товара</span></div></article>
+      <article class="результат"><div><b>Узнаваемое изделие в кадре</b><span>С вниманием к форме, цвету, фактуре и характерным деталям</span></div></article>
+      <article class="результат"><div><b>Кадры под задачу</b><span>Для карточки товара, публикации, рекламы или запуска</span></div></article>
+      <article class="результат"><div><b>Визуальная история товара</b><span>Несколько способов показать изделие в новом окружении</span></div></article>
+    </div>
   </div>
-  <aside class="врезка"><b>На руках — готовые изображения товара</b><p>Для нужной площадки и сценария</p></aside>
+  <aside class="врезка итог-сторона"><b>На руках — готовые изображения товара</b><p>Для нужной площадки и сценария</p></aside>
 </div>
 </section>
 <section class="блок блок--кейс блок--тихо светлый второй фон--пятна" id="экран-04" data-тип="кейс" data-вёрстка="своя">
@@ -157,8 +170,8 @@
 <div class="блок__внутри">
   <header class="секция__шапка пример__шапка"><p class="кикер">Пример</p><h2>Украшение остаётся собой в новой подаче</h2><p class="лид секция__лид">Сначала — исходная фотография изделия, потом — готовая визуальная подача</p></header>
   <div class="пример__кадры">
-    <figure class="фото пример__кадр пример__кадр--тёмный"><div class="пример__вложение"><img src="img/ukrashenie-referens.webp" alt="Исходная фотография украшения" loading="lazy" decoding="async"></div><figcaption class="пример__подпись"><b>Было</b><span class="подпись--полная">Исходная фотография украшения</span><span class="подпись--телефон">Исходник</span></figcaption></figure>
-    <figure class="фото пример__кадр пример__кадр--тёмный"><div class="пример__вложение"><img src="img/ukrashenie-rezultat.webp" alt="Украшение в новой визуальной подаче" loading="lazy" decoding="async"></div><figcaption class="пример__подпись"><b>Стало</b><span class="подпись--полная">Новая визуальная подача украшения</span><span class="подпись--телефон">Новая подача</span></figcaption></figure>
+    <figure class="фото пример__кадр пример__кадр--тёмный"><div class="пример__вложение"><picture><source media="(max-width: 899px)" srcset="img/ukrashenie-referens-telefon.webp"><img src="img/ukrashenie-referens.webp" alt="Исходная фотография украшения" width="900" height="1152" loading="lazy" decoding="async"></picture></div><figcaption class="пример__подпись"><b>Было</b><span class="подпись--полная">Исходная фотография украшения</span><span class="подпись--телефон">Исходник</span></figcaption></figure>
+    <figure class="фото пример__кадр пример__кадр--тёмный"><div class="пример__вложение"><picture><source media="(max-width: 899px)" srcset="img/ukrashenie-rezultat-telefon.webp"><img src="img/ukrashenie-rezultat.webp" alt="Украшение в новой визуальной подаче" width="1072" height="707" loading="lazy" decoding="async"></picture></div><figcaption class="пример__подпись"><b>Стало</b><span class="подпись--полная">Новая визуальная подача украшения</span><span class="подпись--телефон">Новая подача</span></figcaption></figure>
   </div>
 </div>
 </section>
@@ -179,10 +192,10 @@
   </div>
 </section>
 <section class="блок блок--кейс светлый второй" id="экран-06" data-тип="кейс" data-вёрстка="своя">
-<div class="блок__внутри"><header class="полоса6__шапка"><div class="секция__шапка"><p class="кикер">Кейс</p><h2>Ваза ручной росписи — от исходника к серии</h2></div><p class="полоса6__вывод">От домашнего исходника — к трём новым интерьерным сценам, где ваза остаётся узнаваемой.</p></header><div class="полоса6__кадры"><figure class="фото полоса6__исходник роль"><img src="img/vaza-ishodnik.webp" alt="Домашняя фотография вазы ручной росписи" loading="lazy" decoding="async"><figcaption class="полоса6__ярлык"><b>Было</b><span>Исходник</span></figcaption></figure><div class="полоса6__результаты роль роль--итог"><figure class="фото полоса6__результат"><img src="img/vaza-scena-1.webp" alt="Ваза в первой новой интерьерной сцене" loading="lazy" decoding="async"><figcaption class="полоса6__ярлык"><b>01</b></figcaption></figure><figure class="фото полоса6__результат"><img src="img/vaza-scena-2.webp" alt="Ваза во второй новой интерьерной сцене" loading="lazy" decoding="async"><figcaption class="полоса6__ярлык"><b>02</b></figcaption></figure><figure class="фото полоса6__результат"><img src="img/vaza-scena-3.webp" alt="Ваза в третьей новой интерьерной сцене" loading="lazy" decoding="async"><figcaption class="полоса6__ярлык"><b>03</b></figcaption></figure><p class="полоса6__итог">Стало</p></div></div><div class="полоса6__строка"><span><b>3 изображения</b><br>в серии</span><span><b>2 дня</b><br>срок выполнения</span><span><b>1 800 ₽</b><br>стоимость пакета</span></div></div>
+<div class="блок__внутри"><header class="полоса6__шапка"><div class="секция__шапка"><p class="кикер">Кейс</p><h2>Ваза ручной росписи — от исходника к серии</h2></div><p class="полоса6__вывод">От домашнего исходника — к трём новым интерьерным сценам, где ваза остаётся узнаваемой.</p></header><div class="полоса6__кадры"><figure class="фото полоса6__исходник роль"><picture><source media="(max-width: 899px)" srcset="img/vaza-ishodnik-telefon.webp"><img src="img/vaza-ishodnik.webp" alt="Домашняя фотография вазы ручной росписи" loading="lazy" decoding="async"></picture><figcaption class="полоса6__ярлык"><b>Было</b><span>Исходник</span></figcaption></figure><div class="полоса6__результаты роль роль--итог"><figure class="фото полоса6__результат"><picture><source media="(max-width: 899px)" srcset="img/vaza-scena-1-telefon.webp"><img src="img/vaza-scena-1.webp" alt="Ваза в первой новой интерьерной сцене" loading="lazy" decoding="async"></picture><figcaption class="полоса6__ярлык"><b>01</b></figcaption></figure><figure class="фото полоса6__результат"><picture><source media="(max-width: 899px)" srcset="img/vaza-scena-2-telefon.webp"><img src="img/vaza-scena-2.webp" alt="Ваза во второй новой интерьерной сцене" loading="lazy" decoding="async"></picture><figcaption class="полоса6__ярлык"><b>02</b></figcaption></figure><figure class="фото полоса6__результат"><picture><source media="(max-width: 899px)" srcset="img/vaza-scena-3-telefon.webp"><img src="img/vaza-scena-3.webp" alt="Ваза в третьей новой интерьерной сцене" loading="lazy" decoding="async"></picture><figcaption class="полоса6__ярлык"><b>03</b></figcaption></figure><p class="полоса6__итог">Стало</p></div></div><div class="полоса6__строка"><span><b>3 изображения</b><br>в серии</span><span><b>2 дня</b><br>срок выполнения</span><span><b>1 800 ₽</b><br>стоимость пакета</span></div></div>
 </section>
 <section class="блок блок--работы светлый" id="экран-07" data-тип="работы" data-вёрстка="своя">
-<div class="блок__внутри"><header class="лента7__шапка"><div class="секция__шапка"><p class="кикер">Более глубокий формат</p><h2>Визуальная упаковка одного товара</h2></div><p class="лента7__лид">Когда нужны материалы сразу для нескольких публикаций об одном изделии</p></header><div class="лента7__кадры" aria-label="Лента материалов для шкатулки"><figure class="фото лента7__кадр"><img loading="eager" src="img/shkatulka-ishodnik.webp" alt="Исходная фотография шкатулки"><figcaption><b>Исходник</b></figcaption></figure><figure class="фото лента7__кадр"><img loading="eager" src="img/shkatulka-1.webp" alt="Шкатулка в интерьерной сцене"><figcaption><b>01</b><span>Стало</span></figcaption></figure><figure class="фото лента7__кадр"><img loading="eager" src="img/shkatulka-2-razmery-v2.webp" alt="Шкатулка с размерами: высота с крышкой 16 сантиметров, диаметр верхнего края 10 сантиметров"><figcaption><b>02</b></figcaption></figure><figure class="фото лента7__кадр"><img loading="eager" src="img/shkatulka-3.webp" alt="Шкатулка на книжной полке"><figcaption><b>03</b></figcaption></figure><figure class="фото лента7__кадр"><img loading="eager" src="img/shkatulka-4-collage-v2.webp" alt="Коллаж деталей шкатулки: фурнитура, ножка, плетение и крышка"><figcaption><b>04</b></figcaption></figure><figure class="фото лента7__кадр"><img loading="eager" src="img/shkatulka-5.webp" alt="Шкатулка в новой интерьерной сцене"><figcaption><b>05</b></figcaption></figure></div><footer class="лента7__низ"><div class="лента7__состав"><span>5 изображений товара</span><span>карточка с размерами</span><span>коллаж деталей</span><span>карусель до 5 слайдов</span><span>видео до 10 секунд · +1 500 ₽</span></div><p class="лента7__цена">6 000 ₽</p></footer></div>
+<div class="блок__внутри"><header class="лента7__шапка"><div class="секция__шапка"><p class="кикер">Более глубокий формат</p><h2>Визуальная упаковка одного товара</h2></div><p class="лента7__лид">Когда нужны материалы сразу для нескольких публикаций об одном изделии</p></header><div class="лента7__кадры" aria-label="Лента материалов для шкатулки"><figure class="фото лента7__кадр"><picture><source media="(max-width: 899px)" srcset="img/shkatulka-ishodnik-telefon.webp"><img loading="lazy" decoding="async" src="img/shkatulka-ishodnik.webp" alt="Исходная фотография шкатулки"></picture><figcaption><b>Исходник</b></figcaption></figure><figure class="фото лента7__кадр"><picture><source media="(max-width: 899px)" srcset="img/shkatulka-1-telefon.webp"><img loading="lazy" decoding="async" src="img/shkatulka-1.webp" alt="Шкатулка в интерьерной сцене"></picture><figcaption><b>01</b><span>Стало</span></figcaption></figure><figure class="фото лента7__кадр"><picture><source media="(max-width: 899px)" srcset="img/shkatulka-2-razmery-v2-telefon.webp"><img loading="lazy" decoding="async" src="img/shkatulka-2-razmery-v2.webp" alt="Шкатулка с размерами: высота с крышкой 16 сантиметров, диаметр верхнего края 10 сантиметров"></picture><figcaption><b>02</b></figcaption></figure><figure class="фото лента7__кадр"><picture><source media="(max-width: 899px)" srcset="img/shkatulka-3-telefon.webp"><img loading="lazy" decoding="async" src="img/shkatulka-3.webp" alt="Шкатулка на книжной полке"></picture><figcaption><b>03</b></figcaption></figure><figure class="фото лента7__кадр"><picture><source media="(max-width: 899px)" srcset="img/shkatulka-4-collage-v2-telefon.webp"><img loading="lazy" decoding="async" src="img/shkatulka-4-collage-v2.webp" alt="Коллаж деталей шкатулки: фурнитура, ножка, плетение и крышка"></picture><figcaption><b>04</b></figcaption></figure><figure class="фото лента7__кадр"><picture><source media="(max-width: 899px)" srcset="img/shkatulka-5-telefon.webp"><img loading="lazy" decoding="async" src="img/shkatulka-5.webp" alt="Шкатулка в новой интерьерной сцене"></picture><figcaption><b>05</b></figcaption></figure><figure class="фото лента7__кадр"><video controls preload="none" poster="img/shkatulka-1-telefon.webp" src="img/shkatulka-video.mp4" aria-label="Видео-демонстрация шкатулки"></video><figcaption><b>Видео</b><span>до 10 секунд</span></figcaption></figure></div><footer class="лента7__низ"><div class="лента7__состав"><span>5 изображений товара</span><span>карточка с размерами</span><span>коллаж деталей</span><span>карусель до 5 слайдов</span><span>видео до 10 секунд · +1 500 ₽</span></div><p class="лента7__цена">6 000 ₽</p></footer></div>
 </section>
 <section class="блок блок--о-себе блок--громко светлый второй" id="экран-08" data-тип="о-себе" data-вёрстка="своя">
   <div class="блок__внутри">
@@ -224,11 +237,64 @@
         <div class="цены9__строка цены9__доп"><span><span class="цены9__название">Короткое видео до 10 секунд</span><span class="цены9__пояснение">допуслуга к визуальной упаковке</span></span><b class="цены9__стоимость">+1 500 ₽</b></div>
       </article>
     </div>
+    <p class="цены9__условия">Объём, исходники, сроки, количество правок и применимость выбранной сцены уточняются до заказа</p>
     <div class="цены9__завершение"><a class="кнопка кнопка--главная" href="https://vk.me/tovar_v_kadre">Написать в «Товар в кадре»</a></div>
   </div>
 </section>
-<section class="блок блок--условия блок--тихо светлый второй" id="экран-10" data-тип="условия" data-вёрстка="своя"><div class="блок__внутри"><div class="условия10__сетка"><header><p class="кикер">До старта работы</p><h2>Согласуем задачу заранее</h2><p class="секция__лид">Так серия получается полезной для вашей площадки, а объём работы — понятным с самого начала</p></header><div class="условия10__плитки"><div class="условия10__плитка"><b>Исходники</b>фотографии и важные детали изделия</div><div class="условия10__плитка"><b>Задача</b>согласуем площадку и назначение материалов</div><div class="условия10__плитка"><b>Правки</b>два раунда в рамках согласованной задачи</div><div class="условия10__плитка"><b>Новая идея</b>смена задачи оценивается отдельно</div><div class="условия10__плитка"><b>Качество</b>исходник влияет на применимость сцены и результат</div><div class="условия10__плитка условия10__плитка--ссылка"><b>Требования к фото</b><a href="https://vk.ru/wall-241066631_8">Посмотреть требования к исходным фотографиям →</a></div></div></div></div></section>
-<section class="блок блок--финал светлый" id="экран-11" data-тип="финал" data-вёрстка="своя"><div class="блок__внутри"><div class="финал11"><p class="кикер">Товар в кадре</p><h2>Новые визуальные истории для вашего настоящего товара</h2><p class="секция__лид">Перед началом согласуем задачу, исходники и формат</p><div class="финал11__связь"><a class="кнопка" href="https://vk.me/tovar_v_kadre">Написать в «Товар в кадре»</a><a class="кнопка финал11__telegram" href="https://t.me/nasto100dizain">Написать в Телеграмм</a></div><p class="финал11__статус">Работаю как самозанятая · после оплаты направляю чек</p></div></div></section>
+<section class="блок блок--кейс светлый второй" id="экран-10" data-тип="кейс" data-вёрстка="своя">
+<div class="блок__внутри">
+  <header class="брелок10__шапка">
+    <div class="секция__шапка">
+      <p class="кикер">Кейс</p>
+      <h2>Брелок ручной работы — от исходника к серии</h2>
+    </div>
+    <p class="брелок10__лид">От домашнего снимка — к готовым кадрам для публикации</p>
+  </header>
+  <div class="брелок10__сравнение">
+    <div class="роль брелок10__часть">
+      <div class="брелок10__описание">
+        <b>Было</b>
+        <p>один домашний снимок брелока рядом с линейкой</p>
+      </div>
+      <figure class="фото брелок10__кадр брелок10__исходник">
+        <img src="img/brelok-ishodnik.webp" alt="Домашний снимок брелока ручной работы рядом с линейкой" loading="lazy" decoding="async">
+        <figcaption class="брелок10__мобильная-подпись">Было</figcaption>
+      </figure>
+    </div>
+    <div class="роль роль--итог брелок10__часть">
+      <div class="брелок10__описание">
+        <b>Стало</b>
+        <p>три готовых кадра того же брелока — на рюкзаке, крупно и на ладони</p>
+      </div>
+      <div class="брелок10__результаты">
+        <figure class="фото брелок10__кадр">
+          <img src="img/brelok-rezultat.webp" alt="Брелок ручной работы на рюкзаке" loading="lazy" decoding="async">
+          <figcaption>на рюкзаке</figcaption>
+        </figure>
+        <figure class="фото брелок10__кадр">
+          <img src="img/brelok-detail.webp" alt="Крупный кадр брелока ручной работы" loading="lazy" decoding="async">
+          <figcaption>крупно</figcaption>
+        </figure>
+        <figure class="фото брелок10__кадр">
+          <img src="img/brelok-v-ruke.webp" alt="Брелок ручной работы на ладони" loading="lazy" decoding="async">
+          <figcaption>на ладони</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <ul class="цифры брелок10__цифры">
+    <li class="цифра"><b class="цифра__значение">1</b><span class="цифра__подпись">товар</span></li>
+    <li class="цифра"><b class="цифра__значение">3</b><span class="цифра__подпись">готовых кадра</span></li>
+    <li class="цифра"><b class="цифра__значение">4</b><span class="цифра__подпись">кадра в истории</span></li>
+  </ul>
+</div>
+</section>
+<section class="блок блок--условия блок--тихо светлый" id="экран-11" data-тип="условия" data-вёрстка="своя">
+<span class="пятно" aria-hidden="true"></span>
+<div class="блок__внутри"><header class="секция__шапка"><p class="кикер">До старта работы</p><h2>Согласуем задачу заранее</h2><p class="лид секция__лид">Так серия получается полезной для вашей площадки, а объём работы — понятным с самого начала</p></header><div class="условия"><div class="условие"><div><b>Исходники и особенности изделия</b><span>Присылаете фотографии и отмечаете важные детали</span></div></div><div class="условие"><div><b>Задача и площадка</b><span>Согласуем, для чего нужны материалы и где они будут размещены</span></div></div><div class="условие"><div><b>Два раунда правок</b><span>Входят в стоимость в рамках согласованной задачи</span></div></div><div class="условие"><div><b>Новая идея или смена задачи</b><span>Оценивается отдельно</span></div></div><div class="условие"><div><b>Качество исходника</b><span>Влияет на применимость выбранной сцены и результат</span></div></div></div><a class="условия__ссылка" href="https://vk.ru/wall-241066631_8">Посмотреть требования к исходным фотографиям →</a></div>
+<script>(function () { function запустить() { var экран = document.getElementById("экран-11"); var панель = document.querySelector(".липкая-кнопка"); if (!экран || !панель || !window.IntersectionObserver) { return; } new IntersectionObserver(function (записи) { var виден = записи[0].isIntersecting; document.body.classList.toggle("условия-на-виду", виден); панель.hidden = виден; }, { threshold: .15 }).observe(экран); } if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", запустить); } else { запустить(); } }());</script>
+</section>
+<section class="блок блок--финал светлый второй" id="экран-12" data-тип="финал" data-вёрстка="своя"><div class="блок__внутри"><div class="финал11"><p class="кикер">Товар в кадре</p><h2>Новые визуальные истории для вашего настоящего товара</h2><p class="секция__лид">Перед началом согласуем задачу, исходники и формат</p><div class="финал11__связь"><a class="кнопка" href="https://vk.me/tovar_v_kadre">Написать в «Товар в кадре»</a><a class="кнопка финал11__telegram" href="https://t.me/nasto100dizain">Написать в Телеграмм</a></div><p class="финал11__статус">Работаю как самозанятая · после оплаты направляю чек</p></div></div></section>
 <div class="липкая-кнопка"><a class="кнопка кнопка--главная" href="https://vk.me/tovar_v_kadre">Написать в «Товар в кадре»</a></div>
 <script>
 (function () {
@@ -248,6 +314,28 @@
   new IntersectionObserver(function (записи) {
     пометить(записи[записи.length - 1].isIntersecting);
   }, { threshold: 0 }).observe(кнопка);
+})();
+</script>
+<script>
+(function () {
+  var видео = document.querySelector(".первый-экран__картинка video");
+  if (!видео) { return; }
+  var фигура = видео.closest(".картинка"), ua = navigator.userAgent;
+  var телефон = matchMedia("(max-width: 899px)").matches, тихо = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var сафари = /safari/i.test(ua) && !/chrome|chromium|crios|android|edg/i.test(ua);
+  var альфа = фигура.classList.contains("картинка--живой-портрет");
+  function постер() { видео.pause(); видео.removeAttribute("autoplay"); фигура.classList.add("картинка--постер"); }
+  if (телефон && видео.getAttribute("data-телефон")) {
+    видео.setAttribute("poster", видео.getAttribute("data-телефон-постер") || видео.getAttribute("poster"));
+    var кадр = фигура.querySelector("img");
+    if (кадр) { кадр.src = видео.getAttribute("poster"); }
+    видео.src = видео.getAttribute("data-телефон"); видео.load();   // src элемента сильнее <source>: иначе браузер с WebM оставит горизонтальный ролик
+  }
+  if (тихо) { document.querySelectorAll(".первый-экран__картинка video").forEach(function (в) { в.pause(); в.removeAttribute("autoplay"); }); }
+  if (тихо || (альфа && (сафари || !видео.canPlayType('video/webm; codecs="vp9"')))) { постер(); return; }
+  видео.addEventListener("error", постер, true);
+  var обещание = видео.play();
+  if (обещание && обещание.catch) { обещание.catch(постер); }
 })();
 </script>
 </body>
