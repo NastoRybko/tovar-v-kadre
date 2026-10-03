@@ -1828,6 +1828,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-08 .автор8__кикер { grid-area: кикер; justify-self: start; margin-bottom: var(--отступ-блока); }
   #экран-08.светлый .автор8__кикер, #экран-08.светлый .автор8__текст .акцент { color: var(--цвет-акцент-маркер); }
   #экран-08.тёмный .автор8__кикер, #экран-08.тёмный .автор8__текст .акцент { color: var(--цвет-тёплый-мягкий); }
+  #экран-08.светлый .автор8__кикер { padding: .5625em .875em; border: 0; border-radius: 9em; background: var(--цвет-тёмный-фон); color: var(--цвет-фон-2); letter-spacing: var(--разрядка-кикера); }
   #экран-08 .автор8__текст { padding: clamp(8px, 2vw, 22px) 0; }
   #экран-08 .автор8__текст { grid-area: текст; }
   #экран-08 .автор8__текст h2 { color: var(--цвет-текст); }
@@ -1913,6 +1914,13 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   @media (min-width: 900px) and (max-height: 900px) {
     #экран-10 { min-height: 0; display: block; padding-block: 44px; }
   }
+  @media (min-width: 900px) and (max-height: 700px) {
+    #экран-10 { padding-block: 24px; }
+    #экран-10 .брелок10__шапка { margin-bottom: 16px; }
+    #экран-10 .брелок10__описание { min-height: 0; }
+    #экран-10 .брелок10__кадр img { height: 150px; }
+    #экран-10 .брелок10__цифры { margin-top: 14px; padding-block: 10px; }
+  }
   @media (max-width: 899px) {
     #экран-10 .брелок10__шапка { grid-template-columns: 1fr; gap: 18px; text-align: center; }
     #экран-10 .брелок10__шапка .секция__шапка { justify-items: center; }
@@ -1942,6 +1950,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 #экран-11 .условия__ссылка { display: inline-block; margin-top: 24px; padding: .8em 1em; border-radius: var(--радиус-карточки); background: var(--цвет-акцент); color: var(--цвет-текст); font-size: var(--кегль-текст); font-weight: 700; text-decoration: none; transition: background var(--длительность) var(--плавность), transform var(--длительность) var(--плавность); }
 #экран-11 .условия__ссылка:hover { background: var(--цвет-акцент-глубже); color: var(--цвет-фон-2); transform: translateY(-2px); }
 @media (min-width: 900px) and (max-height: 900px) { #экран-11 { padding-block: 44px; } #экран-11 .условия { margin-top: 22px; } #экран-11 .условие { padding-block: 14px; } #экран-11 .условия__ссылка { margin-top: 16px; } }
+@media (min-width: 900px) and (max-height: 700px) { #экран-11 { padding-block: 24px; } #экран-11 .секция__лид { line-height: 1.4; } #экран-11 .условия { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--отступ-блока); margin-top: 16px; } #экран-11 .условие { grid-template-columns: 4rem minmax(0, 1fr); gap: 14px; padding-block: 10px; } #экран-11 .условие:last-child { grid-column: 1 / -1; } #экран-11 .условия__ссылка { margin-top: 12px; } }
 @media (max-width: 600px) { #экран-11 { padding-bottom: calc(var(--отступ-секции) + 5.5rem); } #экран-11 .условие { grid-template-columns: 2rem minmax(0, 1fr); gap: 10px; } #экран-11 .условие b { font-size: var(--кегль-лид); } #экран-11 .условие span, #экран-11 .условия__ссылка { font-size: var(--кегль-текст); } }
 
 /* экран 12 */
